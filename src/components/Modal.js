@@ -1,14 +1,15 @@
-import React from 'react'
-
-const Modal = () => {
-  return (
-    <div className='modal'>
-        <p>Are you sure?</p>
-        <button className='btn btn--alt'>Cancel</button>
-        <button className='btn'>Confirm</button>
-
-    </div>
-  )
-}
-
-export default Modal;
+function Modal(props) {
+    return (
+      <div className='modal'>
+        <p>{props.text}</p>
+        <button className='btn btn--alt' onClick={props.onClose}>
+          Cancel
+        </button>
+        <button className='btn' onClick={props.onClose}>
+          Confirm
+        </button>
+      </div>
+    );
+  }
+  
+  export default Modal;
